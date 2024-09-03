@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" 
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" 
+    crossorigin="anonymous">
+    <style>
+        #loading, #results{
+            display: none;
+        }
+    </style>
+
+</head>
+<body class="bg-dark">
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="card card-body text-center mt-5 ">
+                <h1 class="heading display-5 pb-3">Loan Calculator</h1>
+                <!-- input part -->
+                 <!-- form begin -->
+                <form id="loan-form">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Rs</div>
+                            </div>
+                            <input type="number" 
+                                placeholder="Loan-Amount" 
+                                id="loan_amount" 
+                                class="form-control">
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">%</div>
+                            </div>
+                            <input type="number" 
+                                placeholder="Intrest" 
+                                id="Intrest" 
+                                class="form-control">
+
+                        </div>
+                    </div>
+
+                    <!-- cal button -->
+                    <div class="form-group">
+                        <input type="number" 
+                        placeholder="Years To Pay" 
+                        id="Years" 
+                        class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit"
+                                class="btn btn-dark btn-block"
+                                value="Calculate">
+                    </div>
+
+                </form>
+                <!-- loader -->
+                 <div id="loading">
+                    <img src="https://icons8.com/preloaders/preloaders/1487/%E2%80%8B%E2%80%8BIphone-spinner-1.gif"
+                         alt="loading img">
+                 </div>
+                <!-- reasults part -->
+                <div id="results" class="pt-4">
+                    <h1>Results</h1>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Monthly-Payment</div>
+                            </div>
+                            <input type="number" 
+                                id="MonthlyPayment" 
+                                class="form-control"
+                                disabled>
+                         </div>
+                        
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Total Amount</div>
+                            </div>
+                            <input type="number" 
+                                id="TotalAmount" 
+                                class="form-control"
+                                disabled>
+                         </div>
+                        
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Total Intrest</div>
+                            </div>
+                            <input type="number" 
+                                id="TotalIntrest" 
+                                class="form-control"
+                                disabled>
+                         </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="app.js"></script>
+</body>
+</html>
